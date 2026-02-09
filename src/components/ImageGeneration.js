@@ -199,7 +199,7 @@ const ImageGenerator = () => {
   const [gridImageValue, setGridImageValue] = useState(1);
   const [selectedChips, setSelectedChips] = useState([]);
   const [message, setMessage] = useState(
-    "Your image is being generated. Please wait for a while..."
+    "Your image is being generated. Please wait for a while...",
   );
   const [showRefresh, setShowRefresh] = useState(false);
   const [reset, setReset] = useState(false);
@@ -215,7 +215,7 @@ const ImageGenerator = () => {
 
     if (reset) {
       setMessage(
-        "Your stunning visual is being generated. Please wait for a while..."
+        "Your stunning visual is being generated. Please wait for a while...",
       );
       setShowRefresh(false);
       clearTimeout(firstTimeout);
@@ -490,7 +490,7 @@ const ImageGenerator = () => {
                   display: "flex",
                   flexWrap: "wrap",
                   justifyContent: "space-between",
-                  gap: 1,
+                  gap: 2,
                   marginBottom: 2,
                 }}
               >
@@ -678,8 +678,8 @@ const ImageGenerator = () => {
                           gridImageValue === 2
                             ? "40%"
                             : gridImageValue === 4
-                            ? "80%"
-                            : "85%"
+                              ? "80%"
+                              : "85%"
                         }
                         height={"100%"}
                         style={{ borderRadius: "10px", objectFit: "cover" }}
